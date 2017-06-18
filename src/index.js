@@ -8,10 +8,10 @@ class Bundles {
       selector: s,
       browsers: browserslist(s),
       name: s
-        .replace('<', 'lt')
         .replace('<=', 'lte')
-        .replace('>', 'gt')
+        .replace('<', 'lt')
         .replace('>=', 'gte')
+        .replace('>', 'gt')
         .replace('%', '-percent-support')
         .replace(/[^a-zA-Z0-9]/g, '-')
     })).concat([{
@@ -91,6 +91,14 @@ class Bundles {
           new (require('webpack').DefinePlugin)({
             'ROMANO_BUNDLES': JSON.stringify(this._bundles),
             'ROMANO_BUNDLE_FILENAME': JSON.stringify((baseConfig.output && baseConfig.output.filename) || 'bundle.[name].js'),
+          }),
+          new (require('prepack-webpack-plugin').default)({
+            prepack: {
+              compatibility: 'browser',
+              filename: 'repl',
+              timeout: 1000,
+              serialize: true
+            }
           })
         ]
       }])

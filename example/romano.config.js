@@ -3,6 +3,6 @@ const { createBundles } = require('romano')
 module.exports = createBundles({
   entry: './src/index.js',
   bundles: [
-    'chrome > 50'
+    'chrome >= 58'
   ]
 })

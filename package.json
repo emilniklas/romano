@@ -29,6 +29,8 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.2",
     "browserslist": "^2.1.5",
+    "prepack": "https://github.com/facebook/prepack",
+    "prepack-webpack-plugin": "^1.1.0",
     "ua-parser-js": "^0.7.12"
   },
   "peerDependencies": {
