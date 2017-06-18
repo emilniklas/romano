@@ -23,9 +23,9 @@ const { createBundles } = require('romano')
 module.exports = createBundles({
   entry: './src/main.js',
   bundles: [
-    'last 1 version', // This is the preferred bundle
-    'last 5 versions', // This is the less optimized bundle
     'ie < 11', // A special IE bundle
+    'last 1 version', // This is the preferred bundle
+    'last 5 versions' // This is the less optimized bundle
   ]
 })
 ```

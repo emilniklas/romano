@@ -18,13 +18,12 @@ export function getBundle (userAgent) {
 function matchesUA (agent) {
   const agentVersion = parseVersion(agent.browser.version)
   const agentName = getBrowserName(agent).toLowerCase()
+
   return (browser) => {
     const res = /(\w+) (all|[\d.]+)(?:-([\d.]+))?/.exec(browser)
     const browserName = res[1]
     const minVersion = res[2] === 'all' ? { major: 0, minor: 0, patch: 0 } : parseVersion(res[2])
     const maxVersion = res[2] === 'all' ? { major: Infinity, minor: Infinity, patch: Infinity } : parseVersion(res[3] || res[2], Infinity)
-
-    console.log({ browserName, agentName, agentVersion, minVersion, maxVersion })
 
     return browserName === agentName &&
       agentVersion.major >= minVersion.major &&

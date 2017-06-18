@@ -1,6 +1,6 @@
 {
   "name": "romano",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Serve the bundle the client deserves",
   "main": "src/index.js",
   "directories": {
