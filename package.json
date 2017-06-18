@@ -1,0 +1,40 @@
+{
+  "name": "romano",
+  "version": "0.0.0",
+  "description": "Serve the bundle the client deserves",
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilniklas/romano.git"
+  },
+  "keywords": [
+    "webpack",
+    "bundle",
+    "babel"
+  ],
+  "author": "Emil Persson <emil.n.persson@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/emilniklas/romano/issues"
+  },
+  "homepage": "https://github.com/emilniklas/romano#readme",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
+    "browserslist": "^2.1.5",
+    "ua-parser-js": "^0.7.12"
+  },
+  "peerDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  }
+}

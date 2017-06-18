@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "romano": "file:..",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0"
+  }
+}

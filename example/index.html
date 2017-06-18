@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='x-ua-compatible' content='ie=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  </head>
+  <body>
+    <script src='./dist/romano-selector.js'></script>
+    <script>
+      var e = document.createElement('script')
+      e.src = '/dist/' + Romano.getBundle(navigator.userAgent)
+      document.body.appendChild(e)
+    </script>
+  </body>
+</html>
