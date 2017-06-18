@@ -74,19 +74,13 @@ The last step is to serve the correct bundle to the client. There are multiple w
 this, but they all use the client's User-Agent string:
 
 ```javascript
-const { getBundle } = require('./our-romano-config')
+const { getBundle } = require('./dist/romano-selector')
 
 const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) ' +
   'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
 
 getBundle(userAgent)
 // => bundle.last-5-versions.js
-
-getBundle('invalid user agent')
-// => bundle.fallback.js
-
-getBundle(null)
-// => bundle.fallback.js
 ```
 
 #### Client Side Selection
